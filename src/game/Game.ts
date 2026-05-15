@@ -9,7 +9,7 @@ import { ModularSprite } from './sprite/ModularSprite';
 import { SoulController } from './battle/SoulController';
 import { BattleManager } from './battle/BattleManager';
 import { FRISK_SPRITE } from './sprites/frisk';
-import { DEFAULT_CONFIG, COLORS, BATTLE_BOX } from './constants';
+import { DEFAULT_CONFIG, COLORS } from './constants';
 import { BattlePhase } from './types';
 
 export class Game {
@@ -19,21 +19,20 @@ export class Game {
   private input: InputManager;
   private soul: SoulController;
   private battle: BattleManager;
-  private frisk: ModularSprite;
 
-  // Enemy display position
-  private enemyX = 320;
-  private enemyY = 140;
+  /** Frisk modular sprite — displayed as the enemy */
+  private friskEnemy: ModularSprite;
 
-  // Frisk position (shown during menu/overworld)
-  private friskX = 100;
-  private friskY = 350;
+  // Enemy Frisk display position (centered above battle box)
+  private enemyX = 288;
+  private enemyY = 80;
 
   constructor() {
     this.input = new InputManager();
     this.soul = new SoulController();
-    this.battle = new BattleManager('Dummy', 30, 30);
-    this.frisk = new ModularSprite(FRISK_SPRITE, 2);
+    this.battle = new BattleManager('Frisk', 50, 50);
+    // pixelSize=3 for a larger enemy sprite (more imposing on screen)
+    this.friskEnemy = new ModularSprite(FRISK_SPRITE, 3);
     this.loop = new GameLoop(
       DEFAULT_CONFIG.targetFPS,
       this.update.bind(this),
@@ -56,11 +55,11 @@ export class Game {
     // Attach input
     this.input.attach();
 
-    // Start with idle animation for Frisk
-    this.frisk.playAnimation('idle');
+    // Start with idle animation for enemy Frisk
+    this.friskEnemy.playAnimation('idle');
 
-    // Begin the battle
-    this.battle.startBattle('* Dummy blocks the way!');
+    // Begin the battle — Frisk is the enemy
+    this.battle.startBattle('* Frisk stands before you.');
 
     // Start the game loop
     this.loop.start();
@@ -77,14 +76,13 @@ export class Game {
   private update(dt: number): void {
     const input = this.input.getState();
     const justConfirm = this.input.wasJustPressed('confirm');
-    const justCancel = this.input.wasJustPressed('cancel');
     const phase = this.battle.getState().phase;
 
     // Update battle manager
     this.battle.update(dt);
 
-    // Update Frisk animation
-    this.frisk.update(dt);
+    // Update enemy Frisk animation
+    this.friskEnemy.update(dt);
 
     // Phase-specific input handling
     switch (phase) {
@@ -105,6 +103,10 @@ export class Game {
       case 'enemy_attack':
         this.soul.setActive(true);
         this.soul.update(input);
+        // Switch enemy to walk animation during attack
+        if (this.friskEnemy.getDefinition().id === 'frisk') {
+          // Keep idle during attack for now; could change to attack anim later
+        }
         break;
 
       case 'player_action':
@@ -127,10 +129,8 @@ export class Game {
     ctx.fillStyle = COLORS.black;
     ctx.fillRect(0, 0, DEFAULT_CONFIG.width, DEFAULT_CONFIG.height);
 
-    const phase = this.battle.getState().phase;
-
-    // Render enemy sprite (above battle box)
-    this.renderEnemy(ctx);
+    // Render enemy Frisk sprite (above battle box)
+    this.friskEnemy.render(ctx, this.enemyX, this.enemyY);
 
     // Render battle UI (box, text, menus, HP)
     this.battle.render(ctx, this.soul.isActive());
@@ -140,89 +140,8 @@ export class Game {
       this.soul.render(ctx);
     }
 
-    // Render Frisk when in menu or dialogue
-    if (phase === 'player_menu' || phase === 'intro' || phase === 'enemy_dialogue') {
-      this.frisk.render(ctx, this.friskX, this.friskY);
-    }
-
-    // Phase indicator (debug - remove in production)
+    // Phase indicator (debug)
     this.renderPhaseIndicator(ctx);
-  }
-
-  private renderEnemy(ctx: CanvasRenderingContext2D): void {
-    // Render a Training Dummy enemy (Undertale-style)
-    // The Dummy is a humanoid cotton dummy on a stick
-    const x = this.enemyX;
-    const y = this.enemyY;
-
-    // Stick/pole
-    ctx.fillStyle = '#8B4513';
-    ctx.fillRect(x - 3, y + 20, 6, 40);
-
-    // Base
-    ctx.fillStyle = '#654321';
-    ctx.fillRect(x - 15, y + 55, 30, 6);
-
-    // Body (cotton sack)
-    ctx.fillStyle = '#D2B48C';
-    ctx.fillRect(x - 20, y - 20, 40, 42);
-
-    // Body outline
-    ctx.strokeStyle = '#8B7355';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(x - 20, y - 20, 40, 42);
-
-    // Head (cotton ball)
-    ctx.fillStyle = '#D2B48C';
-    ctx.beginPath();
-    ctx.arc(x, y - 32, 16, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.strokeStyle = '#8B7355';
-    ctx.lineWidth = 2;
-    ctx.stroke();
-
-    // Eyes (X marks - stitched)
-    ctx.strokeStyle = '#4A4A4A';
-    ctx.lineWidth = 2;
-    // Left eye X
-    ctx.beginPath();
-    ctx.moveTo(x - 10, y - 38);
-    ctx.lineTo(x - 4, y - 32);
-    ctx.moveTo(x - 4, y - 38);
-    ctx.lineTo(x - 10, y - 32);
-    ctx.stroke();
-    // Right eye X
-    ctx.beginPath();
-    ctx.moveTo(x + 4, y - 38);
-    ctx.lineTo(x + 10, y - 32);
-    ctx.moveTo(x + 10, y - 38);
-    ctx.lineTo(x + 4, y - 32);
-    ctx.stroke();
-
-    // Mouth (stitched line)
-    ctx.beginPath();
-    ctx.moveTo(x - 6, y - 24);
-    ctx.lineTo(x + 6, y - 24);
-    ctx.stroke();
-
-    // Arms (stubby cotton arms)
-    ctx.fillStyle = '#D2B48C';
-    ctx.fillRect(x - 30, y - 14, 12, 8);
-    ctx.fillRect(x + 18, y - 14, 12, 8);
-    ctx.strokeStyle = '#8B7355';
-    ctx.lineWidth = 1;
-    ctx.strokeRect(x - 30, y - 14, 12, 8);
-    ctx.strokeRect(x + 18, y - 14, 12, 8);
-
-    // Stitch lines on body
-    ctx.strokeStyle = '#8B7355';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(x - 20, y - 4);
-    ctx.lineTo(x + 20, y - 4);
-    ctx.moveTo(x - 20, y + 8);
-    ctx.lineTo(x + 20, y + 8);
-    ctx.stroke();
   }
 
   private renderPhaseIndicator(ctx: CanvasRenderingContext2D): void {

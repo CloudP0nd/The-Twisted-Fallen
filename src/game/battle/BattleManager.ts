@@ -180,8 +180,6 @@ export class BattleManager {
     switch (command) {
       case 'FIGHT':
         this.state.phase = 'player_action';
-        // TODO: Attack animation, then damage enemy
-        // For now, auto-deal damage and transition
         this.damageEnemy(5);
         this.queueDialogue(
           [`You attacked ${this.state.enemyName}!`, `${this.state.enemyName} took 5 damage!`],
@@ -199,7 +197,7 @@ export class BattleManager {
       case 'ACT':
         this.state.phase = 'player_action';
         this.queueDialogue(
-          [`You checked ${this.state.enemyName}.`, `ATK 0 DEF 0\n${this.state.enemyName} - Just a training dummy.`],
+          [`* You checked ${this.state.enemyName}.`, `* ATK 10  DEF 10\n* ${this.state.enemyName} - A determined human.`],
           () => this.startEnemyTurn(),
         );
         break;
