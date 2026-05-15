@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://www.reddit.com/r/phaser/comments/1jqqv3c/changing_pixels_of_textures_on_the_fly",
+    "name": "Changing pixels of textures on the fly : r/phaser - Reddit",
+    "snippet": "So I would love to have a plugin that lets me do things like input a given texture, run a function that would check the colors of its pixels ...",
+    "host_name": "www.reddit.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stackoverflow.com/questions/61946774/image-is-pixelated-when-scaled-down",
+    "name": "Image Is pixelated when scaled down - javascript - Stack Overflow",
+    "snippet": "If forced to use Canvas, enable imageSmoothingEnabled = true; imageSmoothingQuality = \"high\" where possible. Ensure your source image resolution ...",
+    "host_name": "stackoverflow.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.phaser.io/api-documentation/4.0.0/class/textures-texture",
+    "name": "Texture | Phaser Help",
+    "snippet": "Set the smoothPixelArt property for this Texture. If true , it will also run setFilter(Phaser.Textures.FilterMode.LINEAR) to enable the necessary linear ...",
+    "host_name": "docs.phaser.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/textures",
+    "name": "Textures - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "smooth-pixel-art preserves the blocky look of pixel art, but smooths the edges between texels when a texture is scaled up. It uses a special shader path and ...",
+    "host_name": "rexrainbow.github.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.io/tutorials/phaser-4-rendering-concepts",
+    "name": "Phaser 4 Rendering Concepts - A deep dive into the new Phaser 4",
+    "snippet": "Phaser 4 is a total overhaul of the WebGL rendering engine. In this article, we'll go through why we needed an overhaul, what we added in the process, ...",
+    "host_name": "phaser.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/phaserjs/phaser/issues/6886",
+    "name": "Pixel art per render instance · Issue #6886 · phaserjs/phaser - GitHub",
+    "snippet": "There has 2 kinds of solution to set pixel art rendering. set pixelArt to true to assign pixel art to all rendering instances texture.",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XLhi9IW0rxg",
+    "name": "Phaser 4 Is Here! | New Renderer, GPU Sprites, Filters & More ⚡️",
+    "snippet": "Try Phaser 4 inside Phaser Editor https://phaser.io/editor?utm_source=youtube&utm_medium=video&utm_campaign=phaser_4_launch Discord: ...",
+    "host_name": "www.youtube.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.discourse.group/t/masks-in-phaser-4/15268",
+    "name": "Masks in Phaser 4 - Examples",
+    "snippet": "In Phaser 4, Geometry Masks are for the Canvas Renderer only. The WebGL Renderer uses Mask Filters instead. Bitmap Masks are gone.",
+    "host_name": "phaser.discourse.group",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.html5gamedevs.com/topic/36805-image-is-pixelated",
+    "name": "Image is pixelated - HTML5 Game Devs Forum",
+    "snippet": "Hi. I'm trying to run my game on a mobile device with the Phaser 3 framework and sprites are rendered as very pixelated images.",
+    "host_name": "www.html5gamedevs.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/shader-builtin",
+    "name": "Effects - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Blend mode : Adds a Blend effect. Blocky : Uses one color per block for a sharp, pixelated style. Ideal for retro art or clear visual masking. Blur : 3 ...",
+    "host_name": "rexrainbow.github.io",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://docs.phaser.io/phaser/concepts/scenes",
+    "name": "Scenes | Phaser Help",
+    "snippet": "Phaser uses the concept of Scenes to allow you to divide your game up into logical sections. A Scene can be as large, or as small, as you like.",
+    "host_name": "docs.phaser.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/scenemanager",
+    "name": "Scene manager - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Runs the given Scene, but does not change the state of this Scene. If the given Scene is paused, it will resume it. If sleeping, it will wake it.",
+    "host_name": "rexrainbow.github.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=PeQn9CmVIgM",
+    "name": "Complete PHASER 4 Course for Beginners (2025) - YouTube",
+    "snippet": "... Phaser 4 for new projects - Display images and graphics - Understand the Phaser scene lifecycle - Position screen elements with coordinates ...",
+    "host_name": "www.youtube.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.discourse.group/t/solved-scenes-run-simultaneously-when-using-a-menu-system/3360",
+    "name": "[SOLVED] Scenes run simultaneously when using a menu system",
+    "snippet": "I'm making a game with multiple levels, which I have implemented using different scenes. The problem arises when I change the scenes ...",
+    "host_name": "phaser.discourse.group",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/FoundryVTT/comments/qrlzjt/scene_phaser_easy_to_use_phased_battle_maps_in",
+    "name": "Scene Phaser - Easy to Use Phased Battle Maps in Foundry VTT",
+    "snippet": "What does Scene Phaser do, exactly? It preserves your combat tracker, tokens, and fog of war throughout the encounter, as you phase from scene ...",
+    "host_name": "www.reddit.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5Jc8wphTyEo",
+    "name": "Setting Up a Phaser Scene and Game Configuration - YouTube",
+    "snippet": "gamedev #phaser #phasereditor In this tutorial, you'll learn how to set up your Phaser 3 game using Phaser Editor v4, starting with the game ...\nOverview of Phaser's Scene system and how it works; Creating and managing multiple scenes: Boot, Main Menu, Game; Adding scenes to the Scene ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stackoverflow.com/questions/76623332/phaser-switching-to-the-previous-scene",
+    "name": "Phaser Switching to the previous scene - Stack Overflow",
+    "snippet": "The easy solution is just keep a global variable/gamestate, where you save the game scene key before switching to the inventory (or on game scene entering ).",
+    "host_name": "stackoverflow.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://generalistprogrammer.com/tutorials/phaser-scene-management-tutorial",
+    "name": "Phaser Scene Tutorial: Manage Game States, Menus & Transitions",
+    "snippet": "Complete Phaser 3 scene management guide covering the scene lifecycle, transitions, data passing, parallel scenes for HUD overlays, ...",
+    "host_name": "generalistprogrammer.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://dev.to/ceceliacreates/working-with-scenes-and-data-in-phaser-2pn4",
+    "name": "Working with Scenes and Data in Phaser - DEV Community",
+    "snippet": "Phaser has a Scene Manager that contains built-in methods for managing the scenes in your game, including starting, stopping, switching, sleeping, and more.",
+    "host_name": "dev.to",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/jdotrjs/phaser-guides/blob/master/Basics/Part3.md",
+    "name": "phaser-guides/Basics/Part3.md at master - GitHub",
+    "snippet": "A Scene is just a class that extends Phaser.Scene and implements one or more lifecycle method. An instance of that class is then passed to the Phaser framework ...",
+    "host_name": "github.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

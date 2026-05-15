@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://docs.phaser.io/phaser/concepts/scenes",
+    "name": "Scenes | Phaser Help",
+    "snippet": "With scenes like menu or title screens that you expect the player to revisit, you have a choice of sleep–wake or shutdown–start. The sleep–wake pattern may be ...",
+    "host_name": "docs.phaser.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/scenemanager",
+    "name": "Scene manager - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Launch the given Scene and run it in parallel with this one. scene.scene.launch(key, data); · Shutdown this Scene and run the given one. scene.scene.start(key, ...",
+    "host_name": "rexrainbow.github.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.discourse.group/t/solved-scenes-run-simultaneously-when-using-a-menu-system/3360",
+    "name": "[SOLVED] Scenes run simultaneously when using a menu system",
+    "snippet": "I'm making a game with multiple levels, which I have implemented using different scenes. The problem arises when I change the scenes ...",
+    "host_name": "phaser.discourse.group",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=MZ6XRRQR_UQ",
+    "name": "Phaser Editor v4: Using Camera Controls for Smooth Transitions",
+    "snippet": "... phaser-editor-megabot-series/releases/tag/player-jump Video Chapters 0:00 - Intro 0:08 - Camera overview 1:42 - Follow target 4:42 - Smooth ...",
+    "host_name": "www.youtube.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.html5gamedevs.com/topic/36276-how-do-i-save-scenes-and-swap-back-and-forth-between-them",
+    "name": "How do I save scenes and swap back and forth between them?",
+    "snippet": "I am trying to create two scenes that I can toggle between. I have been using this example here: https://labs.phaser.io/view.html?src=src\\scenes\\changing scene ...\nA stopped scene cannot be wake any more, that is why your scenes are created again and again. switch can be used for that purpose, and when a ...",
+    "host_name": "www.html5gamedevs.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]

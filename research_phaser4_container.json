@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://docs.phaser.io/api-documentation/4.0.0/api-documentation",
+    "name": "Phaser 4.0.0 API Documentation",
+    "snippet": "This is documentation for Phaser Help Phaser v4.0.0, which is no longer actively maintained. For up-to-date documentation, see the latest version (Phaser v4.1.0) ...",
+    "host_name": "docs.phaser.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/sprite",
+    "name": "Sprite - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Sprite Introduction Display of both static and animated images, built-in game object of phaser. Usage Load texture Texture for static image scene.load.image( ...",
+    "host_name": "rexrainbow.github.io",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.discourse.group/t/create-a-matter-sprite-class-from-a-phaser-container/11272",
+    "name": "Create a Matter Sprite Class from a Phaser Container",
+    "snippet": "I'm trying to create a Matter Sprite from a Phaser Container. This is pretty straightforward using this.matter.add.gameObject(phaserContainer) , however I'd ...",
+    "host_name": "phaser.discourse.group",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.phaser.io/api-documentation/class/gameobjects-container",
+    "name": "Container | Phaser Help",
+    "snippet": "When a Game Object is added to a Container, the Container becomes responsible for the rendering of it. By default it will be removed from the Display List and ...",
+    "host_name": "docs.phaser.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/container",
+    "name": "Container - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Introduction: Control the position and angle of children game objects, built-in game object of phaser.",
+    "host_name": "rexrainbow.github.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=qFmaZACjqUU",
+    "name": "Animate Sprite Sheets in Phaser 4 Made Easy (Beginner's Guide)",
+    "snippet": "Learn how to animate sprite sheets in Phaser 4! Step-by-step beginner's guide to importing, creating, and playing animations for your game ...",
+    "host_name": "www.youtube.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://stackoverflow.com/questions/50773136/put-sprites-inside-another-spritephaser",
+    "name": "Put sprites inside another sprite(Phaser) - Stack Overflow",
+    "snippet": "Now I'm down with one last method which is separate the roof and let the truck become two sprites, but I'm hoping for a better way to do this.",
+    "host_name": "stackoverflow.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://help.phasereditor2d.com/v1/canvas.html",
+    "name": "Canvas, The Scene Editor - Phaser.Sprite",
+    "snippet": "Canvas is a visual (WYSIWYG) game level/object editor for Phaser. With this tool, you can create a level or the prefabs (reusable objects) of the game, layout ...",
+    "host_name": "help.phasereditor2d.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://docs.phaser.io/api-documentation/class/gameobjects-sprite",
+    "name": "Sprite | Phaser Help",
+    "snippet": "A Sprite Game Object is used for the display of both static and animated images in your game. Sprites can have input events and physics bodies.",
+    "host_name": "docs.phaser.io",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XLhi9IW0rxg",
+    "name": "Phaser 4 Is Here! | New Renderer, GPU Sprites, Filters & More ⚡️",
+    "snippet": "Try Phaser 4 inside Phaser Editor https://phaser.io/editor?utm_source=youtube&utm_medium=video&utm_campaign=phaser_4_launch Discord: ...",
+    "host_name": "www.youtube.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

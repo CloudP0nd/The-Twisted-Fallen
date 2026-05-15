@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://phaser.io/examples/v3.55.0/game-objects/container/view/add-sprite-to-container",
+    "name": "Add Sprite To Container - game objects - Phaser",
+    "snippet": "Desktop and Mobile HTML5 game framework. A fast, free and fun open source framework for Canvas and WebGL powered browser games.",
+    "host_name": "phaser.io",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://phaser.discourse.group/t/issues-with-sprite-position-when-switching-parent-sprites/14616",
+    "name": "Issues with sprite position when switching parent sprites - Phaser",
+    "snippet": "I am currently trying to have a child sprite be able to dragged out of it's parent sprite and potentially dropped into another container ...",
+    "host_name": "phaser.discourse.group",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/container",
+    "name": "Container - Notes of Phaser 4 - GitHub Pages",
+    "snippet": "Introduction: Control the position and angle of children game objects, built-in game object of phaser.",
+    "host_name": "rexrainbow.github.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.html5gamedevs.com/topic/10551-how-to-use-offset-for-sprites-body",
+    "name": "How to use offset for sprite's body - HTML5 Game Devs Forum",
+    "snippet": "I am not an expert but i think you are missing the part where you enable the physic body, something like: game.physics.enable(sprite, 'arcade ...",
+    "host_name": "www.html5gamedevs.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=XiDsumRXszc",
+    "name": "Phaser Editor v4: Adding a Player Character and Basic Movement",
+    "snippet": "gamedev #phaser #phasereditor In this tutorial, you'll learn how to add a player character to your Phaser 3 game using Phaser Editor v4 and ...",
+    "host_name": "www.youtube.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  }
+]
