@@ -44,3 +44,40 @@ Work Log:
 Stage Summary:
 - Friskを敵とするレイアウトに変更完了
 - モジュラースプライトシステムが敵キャラとしても機能することを確認
+
+---
+Task ID: phaser4-migration
+Agent: Main Agent
+Task: Migrate game engine from custom Canvas2D to Phaser 4 framework
+
+Work Log:
+- Installed Phaser 4.1.0 via npm
+- Created Phaser game configuration (config.ts, PhaserGame.ts)
+- Implemented TextureGenerator: PixelGrid → CanvasTexture conversion
+- Implemented ModularCharacter: Phaser.Container-based modular sprite system
+- Implemented TypewriterText: Phaser Text + TimerEvent with advance() pattern (Undertale-style wait-for-input)
+- Implemented BattleBox: Phaser Graphics with depth control
+- Implemented MenuButtons: FIGHT/ACT/ITEM/MERCY with SOUL indicator
+- Implemented PlayerInfo: Name, LV, HP bar display
+- Implemented SoulSprite: SOUL movement with cursorKeys and battle box clamping
+- Created BootScene: CanvasTexture generation from PixelGrid data
+- Created BattleScene: 6-phase state machine with keydown event input
+- Fixed Next.js 16 + Phaser SSR issues (dynamic import with ssr:false, turbopack config)
+- Fixed texture key collision (BootScene + ModularCharacter both generating textures)
+- Fixed TypewriterText auto-advance bug (now waits for player Z input before advancing)
+- Fixed Z-ordering with depth properties (battle box depth=5, text depth=10, SOUL depth=100)
+- Converted input handling from JustDown() to keydown events for more reliable detection
+- Removed all debug code from BattleScene
+
+Stage Summary:
+- Phaser 4.1.0 successfully integrated as core game engine
+- All 6 battle phases verified working through VLM visual testing:
+  1. intro: "* Frisk stands before you." typewriter text ✅
+  2. player_menu: FIGHT/ACT/ITEM/MERCY with SOUL indicator ✅
+  3. player_action: Attack dialogue "You attacked Frisk!" ✅
+  4. enemy_dialogue: "Frisk attacks!" ✅
+  5. enemy_attack: Red SOUL heart visible in battle box ✅
+  6. battle_end: Victory text ✅
+- Modular sprite system preserved via Phaser Container
+- PixelGrid → CanvasTexture conversion works correctly
+- TypeScript build passes, Next.js production build succeeds

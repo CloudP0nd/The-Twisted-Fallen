@@ -1,33 +1,30 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
-import { Game } from '@/game/Game';
+import dynamic from 'next/dynamic';
+
+// Phaser accesses `window` on import, so we must disable SSR for the game component.
+const GameContainer = dynamic(() => import('@/components/GameContainer'), {
+  ssr: false,
+  loading: () => (
+    <div
+      style={{
+        width: '640px',
+        height: '480px',
+        border: '3px solid #fff',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: '#fff',
+        fontFamily: '"DotumChe", "Courier New", monospace',
+        fontSize: '20px',
+      }}
+    >
+      Loading...
+    </div>
+  ),
+});
 
 export default function Home() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const gameRef = useRef<Game | null>(null);
-
-  const initGame = useCallback(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    // Create and initialize game
-    const game = new Game();
-    game.init(canvas);
-    gameRef.current = game;
-  }, []);
-
-  useEffect(() => {
-    initGame();
-
-    return () => {
-      if (gameRef.current) {
-        gameRef.current.destroy();
-        gameRef.current = null;
-      }
-    };
-  }, [initGame]);
-
   return (
     <div
       style={{
@@ -54,25 +51,8 @@ export default function Home() {
         UNDERTALE: TWISTED LOVES
       </h1>
 
-      {/* Game Canvas Container */}
-      <div
-        style={{
-          position: 'relative',
-          border: '3px solid #fff',
-          boxShadow: '0 0 20px rgba(255,255,255,0.1)',
-          imageRendering: 'pixelated',
-        }}
-      >
-        <canvas
-          ref={canvasRef}
-          style={{
-            display: 'block',
-            width: '640px',
-            height: '480px',
-            imageRendering: 'pixelated',
-          }}
-        />
-      </div>
+      {/* Phaser Game Container */}
+      <GameContainer />
 
       {/* Controls hint */}
       <div
