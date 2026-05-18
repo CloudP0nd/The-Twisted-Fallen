@@ -37,7 +37,7 @@ export class SoulSprite {
     this.sprite.setDepth(100); // SOUL always on top
 
     // Set up keyboard input
-    this.cursorKeys = scene.input.keyboard.createCursorKeys();
+    this.cursorKeys = scene.input.keyboard!.createCursorKeys();
   }
 
   /** Set whether the SOUL is active (visible and controllable) */

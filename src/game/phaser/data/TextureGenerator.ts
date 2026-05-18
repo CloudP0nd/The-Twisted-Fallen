@@ -27,6 +27,9 @@ export function createTextureFromPixelGrid(
   const height = grid.length * pixelSize;
 
   const canvasTexture = scene.textures.createCanvas(key, width, height);
+  if (!canvasTexture) {
+    throw new Error(`Failed to create CanvasTexture: ${key}`);
+  }
   const ctx = canvasTexture.getContext();
 
   for (let row = 0; row < grid.length; row++) {
@@ -60,6 +63,9 @@ export function createSoulTexture(
   color: string = '#ff0000',
 ): Phaser.Textures.CanvasTexture {
   const canvasTexture = scene.textures.createCanvas(key, size, size);
+  if (!canvasTexture) {
+    throw new Error(`Failed to create CanvasTexture: ${key}`);
+  }
   const ctx = canvasTexture.getContext();
 
   ctx.fillStyle = color;

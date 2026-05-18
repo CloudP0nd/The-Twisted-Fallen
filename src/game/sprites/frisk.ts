@@ -12,7 +12,7 @@
 import { ModularSpriteDef } from '../types';
 import { COLORS } from '../constants';
 
-const C = {
+const C: Record<string, string | null> = {
   _: null,             // transparent
   S: COLORS.friskSkin, // skin
   H: COLORS.friskHair, // hair
@@ -26,7 +26,7 @@ const C = {
 
 // --- HEAD (9x10 pixels) ---
 // Frisk's head: brown hair on top, simple face with dot eyes
-const HEAD: typeof C._[][] = [
+const HEAD: (string | null)[][] = [
   [C._, C._, C.H, C.H, C.H, C.H, C.H, C._, C._],
   [C._, C.H, C.H, C.H, C.H, C.H, C.H, C.H, C._],
   [C.H, C.H, C.H, C.H, C.H, C.H, C.H, C.H, C.H],
@@ -41,7 +41,7 @@ const HEAD: typeof C._[][] = [
 
 // --- BODY (9x8 pixels) ---
 // Blue shirt with magenta stripe
-const BODY: typeof C._[][] = [
+const BODY: (string | null)[][] = [
   [C._, C._, C.S, C.S, C.S, C.S, C.S, C._, C._],
   [C._, C.S, C.B, C.B, C.B, C.B, C.B, C.S, C._],
   [C.S, C.B, C.B, C.B, C.B, C.B, C.B, C.B, C.S],
@@ -53,7 +53,7 @@ const BODY: typeof C._[][] = [
 ];
 
 // --- LEFT ARM (3x6 pixels) ---
-const LEFT_ARM: typeof C._[][] = [
+const LEFT_ARM: (string | null)[][] = [
   [C._, C.S, C.S],
   [C.S, C.B, C.B],
   [C._, C.B, C.B],
@@ -63,7 +63,7 @@ const LEFT_ARM: typeof C._[][] = [
 ];
 
 // --- RIGHT ARM (3x6 pixels) ---
-const RIGHT_ARM: typeof C._[][] = [
+const RIGHT_ARM: (string | null)[][] = [
   [C.S, C.S, C._],
   [C.B, C.B, C.S],
   [C.B, C.B, C._],
@@ -73,7 +73,7 @@ const RIGHT_ARM: typeof C._[][] = [
 ];
 
 // --- LEGS (7x5 pixels) ---
-const LEGS: typeof C._[][] = [
+const LEGS: (string | null)[][] = [
   [C._, C.P, C._, C._, C.P, C._, C._],
   [C._, C.P, C._, C._, C.P, C._, C._],
   [C._, C.P, C._, C._, C.P, C._, C._],

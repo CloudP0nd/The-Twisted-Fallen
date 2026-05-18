@@ -79,7 +79,7 @@ export class BattleScene extends Phaser.Scene {
     this.phaseText.setOrigin(0, 1);
 
     // --- Set up keyboard input using keydown events (more reliable than JustDown) ---
-    this.input.keyboard.on('keydown', (event: KeyboardEvent) => {
+    this.input.keyboard!.on('keydown', (event: KeyboardEvent) => {
       this.handleKeyDown(event);
     });
 
